@@ -3,13 +3,15 @@ name: Weekly gccrs Error Tracking
 on:
   schedule:
     # Every Monday at 00:00 UTC
-    - cron: "0 0 * * 1"
+    # - cron: "0 0 * * 1"
+    # Daily for now for testing purposes
+    - cron: "0 16 * * *"
   workflow_dispatch:
     inputs:
       gccrs_ref:
-        description: "gccrs branch/tag/commit to build (default: main)"
+        description: "gccrs branch/tag/commit to build (default: master)"
         required: false
-        default: "main"
+        default: "master"
 
 permissions:
   contents: write
@@ -21,7 +23,7 @@ jobs:
     timeout-minutes: 360
 
     env:
-      GCCRS_REF: ${{ github.event.inputs.gccrs_ref || 'main' }}
+      GCCRS_REF: ${{ github.event.inputs.gccrs_ref || 'master' }}
       GCCRS_SRC: gccrs-src
       GCCRS_BUILD: gccrs-build
       CCACHE_DIR: ${{ github.workspace }}/.ccache
