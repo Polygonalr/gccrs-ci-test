@@ -1,67 +1,52 @@
 #!/bin/bash
 # store-logs.sh — Commit this week's error logs to the error-logs branch.
 #
-# This script:
-#   1. Creates a temporary clone of this repo
-#   2. Checks out (or creates) the error-logs branch
-#   3. Adds a dated directory with the error logs and report
-#   4. Commits and pushes back to origin
+# Uses git-worktree to avoid a second clone.  The worktree shares the
+# existing repository's credentials, so this works both in GitHub Actions
+# (GITHUB_TOKEN) and locally (SSH / credential helper).
 #
-# Requires GITHUB_TOKEN with contents:write permission.
-# When running locally, uses the current git remote and credentials.
+# On the first run the error-logs branch is created as an orphan so its
+# history is independent of the main branch.
 set -euo pipefail
 
 DATE=$(date +%Y-%m-%d)
-REPO_URL="${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY:-}"
+WORKTREE_DIR="../error-logs-worktree"
 
 # Files to archive
 CORE_LOG="${1:-core_errors.txt}"
 KERNEL_LOG="${2:-kernel_errors.txt}"
 REPORT="${3:-report.md}"
 
-# ── Determine repo URL with auth ─────────────────────────────────────────────
-if [ -n "${GITHUB_TOKEN:-}" ] && [ -n "${GITHUB_REPOSITORY:-}" ]; then
-    AUTH_REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-elif [ -n "${GITHUB_REPOSITORY:-}" ]; then
-    # In GitHub Actions without token fallback
-    AUTH_REPO="https://github.com/${GITHUB_REPOSITORY}.git"
-else
-    # Running locally: use origin remote
-    AUTH_REPO=$(git remote get-url origin 2>/dev/null || echo "")
-    if [ -z "$AUTH_REPO" ]; then
-        echo "ERROR: Cannot determine repo URL. Set GITHUB_REPOSITORY or run from a git repo."
-        exit 1
-    fi
-fi
-
 echo "=== Storing logs for $DATE to error-logs branch ==="
 
-# ── Clone into temp directory ────────────────────────────────────────────────
-TEMP_DIR=$(mktemp -d)
-trap 'rm -rf "$TEMP_DIR"' EXIT
+# ── Fetch the error-logs branch (ignore failure if it doesn't exist) ─────
+git fetch origin error-logs:refs/remotes/origin/error-logs 2>/dev/null || true
 
-echo "Cloning repo into $TEMP_DIR ..."
-
-# Try to clone the error-logs branch
-if ! git clone --branch error-logs --single-branch --depth=1 \
-    "$AUTH_REPO" "$TEMP_DIR" 2>/dev/null; then
-    echo "error-logs branch does not exist yet; creating it..."
-    # Clone main branch shallow, then create orphan
-    git clone --single-branch --depth=1 "$AUTH_REPO" "$TEMP_DIR" 2>/dev/null || {
-        # Fallback: use local repo
-        echo "Clone failed; using local repo as fallback..."
-        git clone "$(git rev-parse --show-toplevel)" "$TEMP_DIR"
-    }
-    git -C "$TEMP_DIR" checkout --orphan error-logs
-    git -C "$TEMP_DIR" rm -rf . 2>/dev/null || true
+# ── Create (or recreate) the worktree ────────────────────────────────────
+# Clean up any stale worktree from a previous run
+if git worktree list | grep -q "$WORKTREE_DIR"; then
+    echo "Removing stale worktree at $WORKTREE_DIR ..."
+    git worktree remove --force "$WORKTREE_DIR" 2>/dev/null || true
 fi
 
-# ── Copy files into dated directory ──────────────────────────────────────────
-mkdir -p "$TEMP_DIR/$DATE"
+if git rev-parse --verify origin/error-logs >/dev/null 2>&1; then
+    echo "error-logs branch exists on origin; checking it out ..."
+    git worktree add "$WORKTREE_DIR" origin/error-logs
+else
+    echo "First run: creating orphan error-logs branch ..."
+    # Create a detached worktree then make it an orphan branch
+    git worktree add --detach "$WORKTREE_DIR"
+    git -C "$WORKTREE_DIR" checkout --orphan error-logs
+    # Clear the index — orphan branches start empty
+    git -C "$WORKTREE_DIR" rm -rf --quiet . 2>/dev/null || true
+fi
+
+# ── Copy files into dated directory ──────────────────────────────────────
+mkdir -p "$WORKTREE_DIR/$DATE"
 
 for f in "$CORE_LOG" "$KERNEL_LOG" "$REPORT"; do
     if [ -f "$f" ]; then
-        cp "$f" "$TEMP_DIR/$DATE/"
+        cp "$f" "$WORKTREE_DIR/$DATE/"
         echo "  Copied: $f"
     else
         echo "  Warning: $f not found, skipping"
@@ -70,7 +55,7 @@ done
 
 # Write a metadata file
 GCCRS_COMMIT="${GCCRS_COMMIT:-unknown}"
-cat > "$TEMP_DIR/$DATE/metadata.json" << EOF
+cat > "$WORKTREE_DIR/$DATE/metadata.json" << EOF
 {
   "date": "$DATE",
   "gccrs_commit": "$GCCRS_COMMIT",
@@ -80,22 +65,27 @@ cat > "$TEMP_DIR/$DATE/metadata.json" << EOF
 }
 EOF
 
-# ── Commit and push ──────────────────────────────────────────────────────────
-git -C "$TEMP_DIR" config user.name  "github-actions[bot]"
-git -C "$TEMP_DIR" config user.email "github-actions[bot]@users.noreply.github.com"
+# ── Commit ───────────────────────────────────────────────────────────────
+git -C "$WORKTREE_DIR" config user.name  "github-actions[bot]"
+git -C "$WORKTREE_DIR" config user.email "github-actions[bot]@users.noreply.github.com"
 
-git -C "$TEMP_DIR" add "$DATE/"
+git -C "$WORKTREE_DIR" add "$DATE/"
 
-if git -C "$TEMP_DIR" diff --cached --quiet; then
+if git -C "$WORKTREE_DIR" diff --cached --quiet; then
     echo "No changes to commit."
+    git worktree remove "$WORKTREE_DIR"
     exit 0
 fi
 
-git -C "$TEMP_DIR" commit -m "Weekly error log: $DATE
+git -C "$WORKTREE_DIR" commit -m "Weekly error log: $DATE
 
 gccrs commit: $GCCRS_COMMIT"
 
-echo "Pushing to error-logs branch..."
-git -C "$TEMP_DIR" push origin error-logs
+# ── Push ─────────────────────────────────────────────────────────────────
+echo "Pushing to error-logs branch ..."
+git -C "$WORKTREE_DIR" push origin error-logs
+
+# ── Cleanup ──────────────────────────────────────────────────────────────
+git worktree remove "$WORKTREE_DIR"
 
 echo "=== Logs stored successfully ==="

@@ -57,6 +57,8 @@ make -C "$GCCRS_BUILD" -j"$NPROC" 2>&1 | tail -20
 
 # Verify the compiler exists
 GCCRS_BIN="$GCCRS_BUILD/gcc/gccrs"
+CRAB1_BIN="$GCCRS_BUILD/gcc/crab1"
+
 if [ ! -x "$GCCRS_BIN" ]; then
     echo "ERROR: gccrs binary not found at $GCCRS_BIN"
     echo "Contents of $GCCRS_BUILD/gcc/:"
@@ -64,7 +66,21 @@ if [ ! -x "$GCCRS_BIN" ]; then
     exit 1
 fi
 
+if [ ! -x "$CRAB1_BIN" ]; then
+    echo "WARNING: crab1 not found at $CRAB1_BIN"
+    echo "The Rust frontend may not have been fully built."
+    echo "Trying to build it explicitly..."
+    make -C "$GCCRS_BUILD/gcc" crab1 -j"$NPROC" 2>&1 | tail -20
+    if [ ! -x "$CRAB1_BIN" ]; then
+        echo "ERROR: crab1 still not found after explicit build."
+        echo "Files matching crab1 in build tree:"
+        find "$GCCRS_BUILD" -name 'crab1*' 2>/dev/null || true
+        exit 1
+    fi
+fi
+
 echo "=== gccrs built successfully: $GCCRS_BIN ==="
+echo "=== crab1 at: $CRAB1_BIN ==="
 "$GCCRS_BIN" --version 2>&1 || true
 
 # Print ccache stats

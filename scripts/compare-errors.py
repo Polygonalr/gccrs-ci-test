@@ -20,7 +20,7 @@ import re
 import subprocess
 import sys
 from datetime import date
-from typing import Dict, List, Optional, Set, Tuple
+from typing import List, Optional, Tuple
 
 # ── Error key extraction ─────────────────────────────────────────────────────
 

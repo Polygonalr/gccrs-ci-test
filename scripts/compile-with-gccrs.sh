@@ -60,7 +60,11 @@ TEMP_ERR=$(mktemp)
 trap 'rm -f "$TEMP_OUT" "$TEMP_ERR"' EXIT
 
 # Run gccrs with a timeout of 5 minutes per file
+# -B tells the driver where to find sub-programs (crab1, cc1, as, ld, etc.)
+# This is needed because we run from the build tree, not an installed prefix.
+GCCRS_LIBEXEC=$(dirname "$GCCRS_BIN_ABS")
 timeout 300s "$GCCRS_BIN_ABS" \
+    -B "$GCCRS_LIBEXEC" \
     -c "$RUST_FILE_ABS" \
     -o /dev/null \
     >"$TEMP_OUT" 2>"$TEMP_ERR" || true
