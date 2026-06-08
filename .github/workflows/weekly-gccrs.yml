@@ -1,0 +1,114 @@
+name: Weekly gccrs Error Tracking
+
+on:
+  schedule:
+    # Every Monday at 00:00 UTC
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+    inputs:
+      gccrs_ref:
+        description: "gccrs branch/tag/commit to build (default: main)"
+        required: false
+        default: "main"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  track-errors:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    env:
+      GCCRS_REF: ${{ github.event.inputs.gccrs_ref || 'main' }}
+      GCCRS_SRC: gccrs-src
+      GCCRS_BUILD: gccrs-build
+      CCACHE_DIR: ${{ github.workspace }}/.ccache
+      CCACHE_MAXSIZE: 2G
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq \
+            build-essential \
+            flex bison \
+            libgmp-dev libmpfr-dev libmpc-dev libisl-dev \
+            texinfo autoconf automake libtool \
+            ccache
+
+      - name: Restore ccache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.CCACHE_DIR }}
+          key: ccache-gccrs-${{ env.GCCRS_REF }}-${{ github.run_id }}
+          restore-keys: |
+            ccache-gccrs-${{ env.GCCRS_REF }}-
+            ccache-gccrs-
+
+      - name: Build gccrs
+        run: bash scripts/build-gccrs.sh
+
+      - name: Compile core lib.rs (gccrs tree)
+        run: |
+          bash scripts/compile-with-gccrs.sh \
+            "${{ env.GCCRS_BUILD }}/gcc/gccrs" \
+            "${{ env.GCCRS_SRC }}/libgrust/rustc-lib/core/src/lib.rs" \
+            core_errors.txt
+
+      - name: Compile kernel lib.rs (linux-rust tree)
+        run: |
+          bash scripts/compile-with-gccrs.sh \
+            "${{ env.GCCRS_BUILD }}/gcc/gccrs" \
+            linux-rust/kernel/lib.rs \
+            kernel_errors.txt
+
+      - name: Fetch error-logs branch
+        run: |
+          git fetch origin error-logs:refs/remotes/origin/error-logs 2>/dev/null || true
+
+      - name: Compare and generate report
+        run: |
+          GCCRS_COMMIT=$(git -C "${{ env.GCCRS_SRC }}" rev-parse --short HEAD)
+          echo "GCCRS_COMMIT=${GCCRS_COMMIT}" >> "$GITHUB_ENV"
+          python3 scripts/compare-errors.py \
+            --core-log core_errors.txt \
+            --kernel-log kernel_errors.txt \
+            --gccrs-commit "${GCCRS_COMMIT}" \
+            --gccrs-ref "${{ env.GCCRS_REF }}" \
+            --output report.md
+
+      - name: Post report to workflow summary
+        if: always()
+        run: |
+          if [ -f report.md ]; then
+            cat report.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gccrs-weekly-report
+          path: report.md
+          retention-days: 90
+
+      - name: Upload error logs artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gccrs-error-logs
+          path: |
+            core_errors.txt
+            kernel_errors.txt
+          retention-days: 90
+
+      - name: Store error logs to branch
+        if: success() || failure()
+        run: bash scripts/store-logs.sh
