@@ -23,6 +23,7 @@ jobs:
     timeout-minutes: 360
 
     env:
+      GCCRS_INCOMPLETE_AND_EXPERIMENTAL_COMPILER_DO_NOT_USE: YES
       GCCRS_REF: ${{ github.event.inputs.gccrs_ref || 'master' }}
       GCCRS_SRC: gccrs-src
       GCCRS_BUILD: gccrs-build
