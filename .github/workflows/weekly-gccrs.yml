@@ -87,13 +87,6 @@ jobs:
             --gccrs-ref "${{ env.GCCRS_REF }}" \
             --output report.md
 
-      - name: Post report to workflow summary
-        if: always()
-        run: |
-          if [ -f report.md ]; then
-            cat report.md >> "$GITHUB_STEP_SUMMARY"
-          fi
-
       - name: Upload report artifact
         if: always()
         uses: actions/upload-artifact@v4
