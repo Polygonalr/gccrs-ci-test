@@ -83,7 +83,7 @@ gccrs commit: $GCCRS_COMMIT"
 
 # ── Push ─────────────────────────────────────────────────────────────────
 echo "Pushing to error-logs branch ..."
-git -C "$WORKTREE_DIR" push origin error-logs
+git -C "$WORKTREE_DIR" push origin HEAD:error-logs
 
 # ── Cleanup ──────────────────────────────────────────────────────────────
 git worktree remove "$WORKTREE_DIR"
