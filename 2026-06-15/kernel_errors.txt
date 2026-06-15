@@ -1,0 +1,10 @@
+./linux-rust/kernel/lib.rs:366:10: error: expected ‘;’ or ‘}’ after expression, found ‘string literal’
+  366 |         c"<Location::file_as_c_str() not supported>"
+      |          ^
+
+=== Summary ===
+File: linux-rust/kernel/lib.rs
+Errors: 1
+Warnings: 0
+0
+gccrs binary: gccrs-build/gcc/gccrs
