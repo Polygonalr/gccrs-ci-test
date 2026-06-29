@@ -1,0 +1,10 @@
+./linux-rust/kernel/lib.rs:366:9: error: C-style string literals require ‘-frust-c-style-string-literals’ to be enabled
+  366 |         c"<Location::file_as_c_str() not supported>"
+      |         ^
+
+=== Summary ===
+File: linux-rust/kernel/lib.rs
+Errors: 1
+Warnings: 0
+0
+gccrs binary: gccrs-build/gcc/gccrs
