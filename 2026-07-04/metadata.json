@@ -1,0 +1,7 @@
+{
+  "date": "2026-07-04",
+  "gccrs_commit": "0e19cee2e",
+  "gccrs_ref": "master",
+  "core_errors_file": "core_errors.txt",
+  "kernel_errors_file": "kernel_errors.txt"
+}
