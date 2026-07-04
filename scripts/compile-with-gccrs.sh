@@ -67,6 +67,7 @@ timeout 300s "$GCCRS_BIN_ABS" \
     -B "$GCCRS_LIBEXEC" \
     -c "$RUST_FILE_ABS" \
     -o /dev/null \
+    -frust-c-style-string-literals \
     >"$TEMP_OUT" 2>"$TEMP_ERR" || true
 
 # Normalize paths in the error output
