@@ -63,14 +63,16 @@ jobs:
           bash scripts/compile-with-gccrs.sh \
             "${{ env.GCCRS_BUILD }}/gcc/gccrs" \
             "${{ env.GCCRS_SRC }}/libgrust/rustc-lib/core/src/lib.rs" \
-            core_errors.txt
+            core_errors.txt \
+            2018
 
       - name: Compile kernel lib.rs (linux-rust tree)
         run: |
           bash scripts/compile-with-gccrs.sh \
             "${{ env.GCCRS_BUILD }}/gcc/gccrs" \
             linux-rust/kernel/lib.rs \
-            kernel_errors.txt
+            kernel_errors.txt \
+            2021
 
       - name: Fetch error-logs branch
         run: |

@@ -1,7 +1,7 @@
 #!/bin/bash
 # compile-with-gccrs.sh — Compile a Rust file with gccrs and capture errors.
 #
-# Usage: compile-with-gccrs.sh <gccrs_binary> <rust_file> <output_log>
+# Usage: compile-with-gccrs.sh <gccrs_binary> <rust_file> <output_log> [edition]
 #
 # Errors are expected for the target files being tracked, so this script
 # always exits 0.  The error log is normalized for consistent diffing:
@@ -15,6 +15,7 @@ set -euo pipefail
 GCCRS_BIN="$1"
 RUST_FILE="$2"
 OUTPUT_LOG="$3"
+EDITION="${4:-}"  # optional, e.g. 2015, 2018, 2021
 
 if [ ! -x "$GCCRS_BIN" ]; then
     {
@@ -63,11 +64,17 @@ trap 'rm -f "$TEMP_OUT" "$TEMP_ERR"' EXIT
 # -B tells the driver where to find sub-programs (crab1, cc1, as, ld, etc.)
 # This is needed because we run from the build tree, not an installed prefix.
 GCCRS_LIBEXEC=$(dirname "$GCCRS_BIN_ABS")
+EDITION_FLAG=()
+if [ -n "$EDITION" ]; then
+    EDITION_FLAG=("-frust-edition=${EDITION}")
+fi
+
 timeout 300s "$GCCRS_BIN_ABS" \
     -B "$GCCRS_LIBEXEC" \
     -c "$RUST_FILE_ABS" \
     -o /dev/null \
     -frust-c-style-string-literals \
+    "${EDITION_FLAG[@]}" \
     >"$TEMP_OUT" 2>"$TEMP_ERR" || true
 
 # Normalize paths in the error output
