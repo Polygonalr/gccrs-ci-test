@@ -1,0 +1,117 @@
+./linux-rust/kernel/alloc/kbox.rs:707:5: error: expecting ‘;’ but ‘where’ found
+  707 |     where
+      |     ^~~~~
+./linux-rust/kernel/alloc/kbox.rs:707:5: error: failed to parse trait impl item in trait impl
+./linux-rust/kernel/alloc/kvec.rs:1056:5: error: expecting ‘;’ but ‘where’ found
+ 1056 |     where
+      |     ^~~~~
+./linux-rust/kernel/alloc/kvec.rs:1056:5: error: failed to parse trait impl item in trait impl
+./linux-rust/kernel/debugfs/callback_adapters.rs:115:11: error: unexpected token ‘{’ in some sort of const production
+  115 |     const { assert!(core::mem::size_of::<F>() == 0) };
+      |           ^
+./linux-rust/kernel/debugfs/callback_adapters.rs:115:54: error: unrecognised token ‘;’ for start of item
+  115 |     const { assert!(core::mem::size_of::<F>() == 0) };
+      |                                                      ^
+./linux-rust/kernel/list/arc.rs:162:79: error: unrecognised token ')' in meta item
+  162 | #[cfg_attr(CONFIG_RUSTC_HAS_COERCE_POINTEE, derive(core::marker::CoercePointee))]
+      |                                                                               ^
+./linux-rust/kernel/list/arc.rs:162:79: error: failed to parse inner meta item in attribute
+./linux-rust/kernel/num/bounded.rs:290:15: error: unexpected token ‘{’ in some sort of const production
+  290 |         const {
+      |               ^
+./linux-rust/kernel/num/bounded.rs:298:9: error: unrecognised token ‘Self’ for item in inherent impl
+  298 |         Self(value)
+      |         ^~~~
+./linux-rust/kernel/num/bounded.rs:298:9: error: failed to parse inherent impl item in inherent impl
+./linux-rust/kernel/page.rs:111:5: error: expecting ‘;’ but ‘where’ found
+  111 |     where
+      |     ^~~~~
+./linux-rust/kernel/page.rs:111:5: error: failed to parse trait item in trait
+./linux-rust/kernel/ptr.rs:88:15: error: unexpected token ‘{’ in some sort of const production
+   88 |         const { Alignment::new_checked(align_of::<T>()).unwrap() }
+      |               ^
+./linux-rust/kernel/ptr.rs:162:1: error: unrecognised token ‘}’ for start of item
+  162 | }
+      | ^
+./linux-rust/kernel/scatterlist.rs:334:42: error: expected ‘>’ at end of generic argument - found ‘=’
+  334 |     for<'a> P: page::AsPageIter<Iter<'a> = VmallocPageIter<'a>> + 'static,
+      |                                          ^
+./linux-rust/kernel/scatterlist.rs:334:42: error: expecting ‘{’ but ‘=’ found
+./linux-rust/kernel/sync/arc.rs:131:79: error: unrecognised token ')' in meta item
+  131 | #[cfg_attr(CONFIG_RUSTC_HAS_COERCE_POINTEE, derive(core::marker::CoercePointee))]
+      |                                                                               ^
+./linux-rust/kernel/sync/arc.rs:131:79: error: failed to parse inner meta item in attribute
+./linux-rust/kernel/sync/arc.rs:547:79: error: unrecognised token ')' in meta item
+  547 | #[cfg_attr(CONFIG_RUSTC_HAS_COERCE_POINTEE, derive(core::marker::CoercePointee))]
+      |                                                                               ^
+./linux-rust/kernel/sync/arc.rs:547:79: error: failed to parse inner meta item in attribute
+./linux-rust/kernel/time/hrtimer/arc.rs:56:44: error: expected ‘>’ at end of generic argument - found ‘=’
+   56 |     T: for<'a> HrTimerCallback<Pointer<'a> = Self>,
+      |                                            ^
+./linux-rust/kernel/time/hrtimer/arc.rs:56:44: error: expecting ‘{’ but ‘=’ found
+./linux-rust/kernel/time/hrtimer/pin.rs:56:36: error: expected ‘>’ at end of generic argument - found ‘=’
+   56 |     T: HrTimerCallback<Pointer<'a> = Self>,
+      |                                    ^
+./linux-rust/kernel/time/hrtimer/pin.rs:56:36: error: expecting ‘{’ but ‘=’ found
+./linux-rust/kernel/time/hrtimer/pin_mut.rs:53:36: error: expected ‘>’ at end of generic argument - found ‘=’
+   53 |     T: HrTimerCallback<Pointer<'a> = Self>,
+      |                                    ^
+./linux-rust/kernel/time/hrtimer/pin_mut.rs:53:36: error: expecting ‘{’ but ‘=’ found
+./linux-rust/kernel/time/hrtimer/tbox.rs:65:44: error: expected ‘>’ at end of generic argument - found ‘=’
+   65 |     T: for<'a> HrTimerCallback<Pointer<'a> = Pin<Box<T, A>>>,
+      |                                            ^
+./linux-rust/kernel/time/hrtimer/tbox.rs:65:44: error: expecting ‘{’ but ‘=’ found
+crab1: error: failed to locate crate ‘core’
+crab1: error: unknown crate ‘core’
+crab1: internal compiler error: in value, at rust/util/optional.h:2083
+0x2ac206b internal_error(char const*, ...)
+	./gccrs-src/gcc/diagnostic-global-context.cc:787
+0xb72209 fancy_abort(char const*, int, char const*)
+	./gccrs-src/gcc/diagnostics/context.cc:1813
+0x92ea8e tl::optional<Rust::Resolver2_0::ForeverStackBase::Node&>::value()
+	./gccrs-src/gcc/rust/util/optional.h:2083
+0xe5f209 tl::optional<Rust::Resolver2_0::ForeverStackBase::Node&>::value()
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.hxx:248
+0xe5f209 tl::optional<Rust::Resolver2_0::Rib::Definition> Rust::Resolver2_0::NameResolutionContext::resolve_path<(Rust::Resolver2_0::Namespace)0>(Rust::Resolver2_0::ForeverStack<(Rust::Resolver2_0::Namespace)0>&, Rust::Resolver2_0::ResolutionPath const&, Rust::Resolver2_0::ResolutionMode, std::function<void (Rust::Resolver2_0::Usage, Rust::Resolver2_0::Definition, Rust::Resolver2_0::Namespace)>, std::vector<Rust::Error, std::allocator<Rust::Error> >&, std::reference_wrapper<Rust::Resolver2_0::ForeverStack<(Rust::Resolver2_0::Namespace)0>::Node>)
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.hxx:217
+0xe61550 tl::optional<Rust::Resolver2_0::Rib::Definition> Rust::Resolver2_0::NameResolutionContext::resolve_path<(Rust::Resolver2_0::Namespace)0>(Rust::Resolver2_0::ForeverStack<(Rust::Resolver2_0::Namespace)0>&, Rust::Resolver2_0::ResolutionPath const&, Rust::Resolver2_0::ResolutionMode, std::function<void (Rust::Resolver2_0::Usage, Rust::Resolver2_0::Definition, Rust::Resolver2_0::Namespace)>, std::vector<Rust::Error, std::allocator<Rust::Error> >&)
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.hxx:63
+0xe61550 Rust::Resolver2_0::NameResolutionContext::resolve_path(Rust::Resolver2_0::ResolutionPath const&, Rust::Resolver2_0::ResolutionMode, std::vector<Rust::Error, std::allocator<Rust::Error> >&, Rust::Resolver2_0::Namespace)
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:611
+0xe61c05 Rust::Resolver2_0::NameResolutionContext::ResolutionBuilder::resolve()
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:742
+0xe62f32 tl::optional<Rust::Resolver2_0::NameResolutionContext::NamespacedDefinition> Rust::Resolver2_0::NameResolutionContext::resolve_path<Rust::AST::SimplePathSegment>(std::vector<Rust::AST::SimplePathSegment, std::allocator<Rust::AST::SimplePathSegment> > const&, bool, tl::optional<std::vector<Rust::Error, std::allocator<Rust::Error> >&>, Rust::Resolver2_0::Namespace)
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:802
+0xe6306e tl::optional<Rust::Resolver2_0::NameResolutionContext::NamespacedDefinition> Rust::Resolver2_0::NameResolutionContext::resolve_path<std::vector<Rust::Error, std::allocator<Rust::Error> >&, Rust::Resolver2_0::Namespace>(Rust::AST::SimplePath const&, std::vector<Rust::Error, std::allocator<Rust::Error> >&, Rust::Resolver2_0::Namespace&&)
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:837
+0xe6306e std::vector<Rust::Resolver2_0::NameResolutionContext::NamespacedDefinition, std::allocator<Rust::Resolver2_0::NameResolutionContext::NamespacedDefinition> > Rust::Resolver2_0::Early::resolve_path_in_all_ns<Rust::AST::SimplePath>(Rust::AST::SimplePath const&)
+	./gccrs-src/gcc/rust/resolve/rust-early-name-resolver-2.0.h:240
+0xe5754a Rust::Resolver2_0::Early::resolve_rebind_import(unsigned int, Rust::Resolver2_0::TopLevel::ImportKind&&)
+	./gccrs-src/gcc/rust/resolve/rust-early-name-resolver-2.0.cc:169
+0xe58ad6 Rust::Resolver2_0::Early::build_import_mapping(std::pair<unsigned int, std::vector<Rust::Resolver2_0::TopLevel::ImportKind, std::allocator<Rust::Resolver2_0::TopLevel::ImportKind> > >&&)
+	./gccrs-src/gcc/rust/resolve/rust-early-name-resolver-2.0.cc:221
+0xe58eef Rust::Resolver2_0::Early::visit(Rust::AST::UseDeclaration&)
+	./gccrs-src/gcc/rust/resolve/rust-early-name-resolver-2.0.cc:584
+0xcfe750 void Rust::AST::DefaultASTVisitor::visit<Rust::AST::Item>(std::unique_ptr<Rust::AST::Item, std::default_delete<Rust::AST::Item> >&)
+	./gccrs-src/gcc/rust/ast/rust-ast-visitor.h:421
+0xcfe750 Rust::AST::DefaultASTVisitor::visit(Rust::AST::Module&)
+	./gccrs-src/gcc/rust/ast/rust-ast-visitor.cc:843
+0xe46436 operator()
+	./gccrs-src/gcc/rust/resolve/rust-default-resolver.cc:66
+0xe46436 scope_inner<Rust::Resolver2_0::CanonicalPathCtx::scope<Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()> >(Rust::NodeId, std::string, Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()>&&)::<lambda()>, Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()> >
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:466
+0xe46436 scope<Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()> >
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:400
+0xe46436 scope<Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()> >
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:393
+./gccrs-build/gcc/crab1 ./linux-rust/kernel/lib.rs -quiet -dumpbase lib.rs -dumpbase-ext .rs -mtune=generic -march=x86-64 -frust-c-style-string-literals -frust-edition=2021 -L./gccrs-build/gcc -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -o /tmp/ccM4bQb8.s
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+Please include the complete backtrace with any bug report.
+See <https://gcc.gnu.org/bugs/> for instructions.
+
+=== Summary ===
+File: linux-rust/kernel/lib.rs
+Errors: 32
+Warnings: 0
+0
+gccrs binary: gccrs-build/gcc/gccrs
