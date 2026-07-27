@@ -1,0 +1,52 @@
+crab1: internal compiler error: in glob_definition, at rust/resolve/rust-finalize-imports-2.0.cc:90
+0x2aca71b internal_error(char const*, ...)
+	./gccrs-src/gcc/diagnostic-global-context.cc:787
+0xb76897 fancy_abort(char const*, int, char const*)
+	./gccrs-src/gcc/diagnostics/context.cc:1813
+0x932d7f Rust::Resolver2_0::GlobbingVisitor::glob_definition(Rust::Resolver2_0::Rib::Definition const&)
+	./gccrs-src/gcc/rust/resolve/rust-finalize-imports-2.0.cc:90
+0xe6884c Rust::Resolver2_0::GlobbingVisitor::glob_definitions(Rust::Resolver2_0::Rib&, Rust::Resolver2_0::Rib&)
+	./gccrs-src/gcc/rust/resolve/rust-finalize-imports-2.0.cc:72
+0xe68de6 void Rust::Resolver2_0::GlobbingVisitor::visit_container<Rust::Resolver2_0::ForeverStack<(Rust::Resolver2_0::Namespace)0> >(Rust::Resolver2_0::ForeverStack<(Rust::Resolver2_0::Namespace)0>&, unsigned int)
+	./gccrs-src/gcc/rust/resolve/rust-finalize-imports-2.0.cc:55
+0xe68de6 Rust::Resolver2_0::GlobbingVisitor::visit_container(unsigned int)
+	./gccrs-src/gcc/rust/resolve/rust-finalize-imports-2.0.cc:61
+0xe59563 Rust::Resolver2_0::Early::finalize_glob_import(Rust::Resolver2_0::NameResolutionContext&, Rust::Resolver2_0::Early::ImportPair const&)
+	./gccrs-src/gcc/rust/resolve/rust-early-name-resolver-2.0.cc:495
+0xe5dd8a Rust::Resolver2_0::Early::visit(Rust::AST::UseDeclaration&)
+	./gccrs-src/gcc/rust/resolve/rust-early-name-resolver-2.0.cc:595
+0xd02db0 void Rust::AST::DefaultASTVisitor::visit<Rust::AST::Item>(std::unique_ptr<Rust::AST::Item, std::default_delete<Rust::AST::Item> >&)
+	./gccrs-src/gcc/rust/ast/rust-ast-visitor.h:421
+0xd02db0 Rust::AST::DefaultASTVisitor::visit(Rust::AST::Module&)
+	./gccrs-src/gcc/rust/ast/rust-ast-visitor.cc:843
+0xe4b046 operator()
+	./gccrs-src/gcc/rust/resolve/rust-default-resolver.cc:66
+0xe4b046 scope_inner<Rust::Resolver2_0::CanonicalPathCtx::scope<Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()> >(Rust::NodeId, std::string, Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()>&&)::<lambda()>, Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()> >
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:466
+0xe4b046 scope<Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()> >
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:400
+0xe4b046 scope<Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()> >
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.h:393
+0xe4b046 operator()
+	./gccrs-src/gcc/rust/resolve/rust-default-resolver.cc:69
+0xe4b046 __invoke_impl<void, Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()>&>
+	/usr/include/c++/13/bits/invoke.h:61
+0xe4b046 __invoke_r<void, Rust::Resolver2_0::DefaultResolver::visit(Rust::AST::Module&)::<lambda()>&>
+	/usr/include/c++/13/bits/invoke.h:111
+0xe4b046 _M_invoke
+	/usr/include/c++/13/bits/std_function.h:290
+0xe415e5 std::function<void ()>::operator()() const
+	/usr/include/c++/13/bits/std_function.h:591
+0xe415e5 Rust::Resolver2_0::NameResolutionContext::scoped(Rust::Resolver2_0::Rib::Kind, unsigned int, std::function<void ()>, tl::optional<Rust::Identifier>)
+	./gccrs-src/gcc/rust/resolve/rust-name-resolution-context.cc:353
+./gccrs-build/gcc/crab1 ./gccrs-src/libgrust/rustc-lib/core/src/lib.rs -quiet -dumpbase lib.rs -dumpbase-ext .rs -mtune=generic -march=x86-64 -frust-c-style-string-literals -frust-edition=2018 -L./gccrs-build/gcc -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -o /tmp/cc7cL6KZ.s
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+Please include the complete backtrace with any bug report.
+See <https://gcc.gnu.org/bugs/> for instructions.
+
+=== Summary ===
+File: gccrs-src/libgrust/rustc-lib/core/src/lib.rs
+Errors: 1
+Warnings: 0
+0
+gccrs binary: gccrs-build/gcc/gccrs
