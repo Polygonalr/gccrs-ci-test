@@ -1,0 +1,614 @@
+./gccrs-src/libgrust/rustc-lib/core/src/num/mod.rs:744:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  744 | #[derive(Copy, Clone, PartialEq, Eq, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/dec2flt/mod.rs:179:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  179 | #[derive(Debug, Clone, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/dec2flt/mod.rs:185:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  185 | #[derive(Debug, Clone, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/dec2flt/parse.rs:16:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   16 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/dec2flt/parse.rs:22:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   22 | #[derive(Debug, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/dec2flt/parse.rs:37:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   37 | #[derive(Debug, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/dec2flt/rawfp.rs:30:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   30 | #[derive(Copy, Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/diy_float.rs:13:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   13 | #[derive(Copy, Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/flt2dec/mod.rs:174:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  174 | #[derive(Copy, Clone, PartialEq, Eq, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/flt2dec/mod.rs:400:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  400 | #[derive(Copy, Clone, PartialEq, Eq, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/flt2dec/decoder.rs:13:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   13 | #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/flt2dec/decoder.rs:30:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   30 | #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/error.rs:8:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+    8 | #[derive(Debug, Copy, Clone, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/error.rs:69:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   69 | #[derive(Debug, Clone, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/num/error.rs:94:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   94 | #[derive(Debug, Clone, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/mem/manually_drop.rs:47:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   47 | #[derive(Copy, Clone, Debug, Default, PartialEq, Eq, PartialOrd, Ord, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/cmp.rs:313:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  313 | #[derive(Clone, Copy, PartialEq, Debug, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/cmp.rs:462:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  462 | #[derive(PartialEq, Eq, Debug, Copy, Clone, Default, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/marker.rs:775:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  775 | #[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ops/control_flow.rs:5:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+    5 | #[derive(Debug, Clone, Copy, PartialEq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ops/generator.rs:9:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+    9 | #[derive(Clone, Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ops/range.rs:668:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  668 | #[derive(Clone, Copy, Debug, Hash, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/any.rs:415:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  415 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Debug, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/array/mod.rs:73:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   73 | #[derive(Debug, Copy, Clone)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/mod.rs:117:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  117 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/mod.rs:132:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  132 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/mod.rs:238:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  238 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/mod.rs:244:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  244 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/mod.rs:347:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  347 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/mod.rs:381:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  381 | #[derive(Debug, Clone)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/mod.rs:408:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  408 | #[derive(Debug, Clone)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/mod.rs:428:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  428 | #[derive(Debug, Clone)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/convert.rs:154:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  154 | #[derive(Clone, Debug, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/convert.rs:174:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  174 | #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/convert.rs:219:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  219 | #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/decode.rs:9:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+    9 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/char/decode.rs:20:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   20 | #[derive(Debug, Clone, Eq, PartialEq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ffi.rs:156:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  156 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ffi.rs:174:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  174 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/mod.rs:99:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   99 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/mod.rs:235:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  235 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/mod.rs:387:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  387 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/mod.rs:520:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  520 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/mod.rs:607:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  607 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/mod.rs:1343:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1343 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/mod.rs:1579:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1579 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/mod.rs:2231:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 2231 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/mod.rs:2427:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 2427 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/chain.rs:20:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   20 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/flatten.rs:237:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  237 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/adapters/fuse.rs:14:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   14 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/sources.rs:9:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+    9 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/sources.rs:101:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  101 | #[derive(Copy, Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/sources.rs:284:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  284 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/iter/sources.rs:384:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  384 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/option.rs:158:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  158 | #[derive(Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/option.rs:1423:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1423 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/option.rs:1462:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1462 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/option.rs:1512:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1512 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/option.rs:1552:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1552 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/option.rs:1670:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1670 | #[derive(Clone, Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/panic.rs:32:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   32 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/panic.rs:176:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  176 | #[derive(Copy, Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/result.rs:237:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  237 | #[derive(Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/result.rs:1304:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1304 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/result.rs:1353:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1353 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/result.rs:1399:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1399 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/sync/atomic.rs:205:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  205 | #[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/fmt/mod.rs:19:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   19 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/fmt/mod.rs:92:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   92 | #[derive(Copy, Clone, Debug, Default, Eq, Hash, Ord, PartialEq, PartialOrd)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/hash/sip.rs:21:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   21 | #[derive(Debug, Clone, Default)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/hash/sip.rs:35:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   35 | #[derive(Debug, Clone, Default)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/hash/sip.rs:57:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   57 | #[derive(Debug, Clone, Default)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/hash/sip.rs:60:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   60 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/hash/sip.rs:71:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   71 | #[derive(Debug, Clone, Copy)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/hash/sip.rs:354:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  354 | #[derive(Debug, Clone, Default)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/hash/sip.rs:371:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  371 | #[derive(Debug, Clone, Default)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:980:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  980 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:1187:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1187 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:1333:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1333 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:1501:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1501 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:1668:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1668 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:1824:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1824 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:1974:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1974 | #[derive(Debug, Clone, Copy)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:2096:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 2096 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:2218:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 2218 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:2328:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 2328 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:2492:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 2492 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:2657:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 2657 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/slice/iter.rs:2817:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 2817 | #[derive(Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/error.rs:44:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   44 | #[derive(Copy, Eq, PartialEq, Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/error.rs:120:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  120 | #[derive(Debug, Clone, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/iter.rs:131:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  131 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/iter.rs:206:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  206 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/iter.rs:1069:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1069 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/iter.rs:1108:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1108 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/iter.rs:1149:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1149 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/iter.rs:1162:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1162 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/iter.rs:1359:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1359 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/iter.rs:1369:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1369 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/iter.rs:1376:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1376 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/validations.rs:128:89: warning: trailing semicolon in macro used in expression context
+  128 |                 return Err(Utf8Error { valid_up_to: old_offset, error_len: $error_len });
+      |                                                                                         ^
+./gccrs-src/libgrust/rustc-lib/core/src/str/pattern.rs:160:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  160 | #[derive(Copy, Clone, Eq, PartialEq, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/pattern.rs:344:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  344 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/pattern.rs:613:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  613 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/pattern.rs:762:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  762 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/pattern.rs:910:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  910 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/pattern.rs:919:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  919 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/pattern.rs:925:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  925 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/pattern.rs:1116:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+ 1116 | #[derive(Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/str/lossy.rs:37:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   37 | #[derive(PartialEq, Eq, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/future/mod.rs:42:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   42 | #[derive(Debug, Copy, Clone)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/future/ready.rs:10:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   10 | #[derive(Debug, Clone)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/task/poll.rs:9:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+    9 | #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd, Hash)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/task/wake.rs:13:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   13 | #[derive(PartialEq, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/task/wake.rs:58:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   58 | #[derive(PartialEq, Copy, Clone, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/alloc/mod.rs:21:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   21 | #[derive(Copy, Clone, PartialEq, Eq, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/alloc/layout.rs:24:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   24 | #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/alloc/layout.rs:399:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  399 | #[derive(Clone, PartialEq, Eq, Debug)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/cpuid.rs:10:3: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   10 | #[derive(Copy, Clone, Debug, Eq, Ord, PartialEq, PartialOrd)]
+      |   ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+    8 |         #[derive(Copy, Clone, Debug, PartialEq)]
+      |           ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:41:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+   41 |         #[derive(Copy, Clone, Debug, PartialEq)]
+      |           ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:41:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:41:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:41:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+    8 |         #[derive(Copy, Clone, Debug, PartialEq)]
+      |           ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/simd.rs:8:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/macros.rs:403:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+  403 |         #[derive(Copy, Clone, Debug)]
+      |           ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/macros.rs:403:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/macros.rs:403:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/macros.rs:403:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/macros.rs:403:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/macros.rs:403:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/macros.rs:403:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/macros.rs:403:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/macros.rs:403:11: warning: derive(Debug) is not fully implemented yet and has no effect - only a stub implementation will be generated
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx.rs:1373:59: warning: trailing semicolon in macro used in expression context
+ 1373 |             simd_shuffle2(a, _mm_undefined_pd(), [$a, $b]);
+      |                                                           ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx2.rs:375:50: warning: trailing semicolon in macro used in expression context
+  375 |             simd_shuffle4(a, b, [$a, $b, $c, $d]);
+      |                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx.rs:123:50: warning: trailing semicolon in macro used in expression context
+  123 |             simd_shuffle4(a, b, [$a, $b, $c, $d]);
+      |                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx.rs:178:66: warning: trailing semicolon in macro used in expression context
+  178 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx.rs:535:50: warning: trailing semicolon in macro used in expression context
+  535 |             simd_shuffle4(a, b, [$a, $b, $c, $d]);
+      |                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx.rs:590:66: warning: trailing semicolon in macro used in expression context
+  590 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx.rs:1327:70: warning: trailing semicolon in macro used in expression context
+ 1327 |             simd_shuffle4(a, _mm256_undefined_pd(), [$a, $b, $c, $d]);
+      |                                                                      ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx2.rs:420:66: warning: trailing semicolon in macro used in expression context
+  420 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx2.rs:2446:53: warning: trailing semicolon in macro used in expression context
+ 2446 |             simd_shuffle4(a, zero, [$a, $b, $c, $d]);
+      |                                                     ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx2.rs:2749:27: warning: trailing semicolon in macro used in expression context
+ 2749 |                         ]);
+      |                           ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx2.rs:2810:27: warning: trailing semicolon in macro used in expression context
+ 2810 |                         ]);
+      |                           ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:8546:14: warning: trailing semicolon in macro used in expression context
+ 8546 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:8629:14: warning: trailing semicolon in macro used in expression context
+ 8629 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:8707:14: warning: trailing semicolon in macro used in expression context
+ 8707 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:8785:14: warning: trailing semicolon in macro used in expression context
+ 8785 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:8867:14: warning: trailing semicolon in macro used in expression context
+ 8867 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:8945:14: warning: trailing semicolon in macro used in expression context
+ 8945 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9268:14: warning: trailing semicolon in macro used in expression context
+ 9268 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9354:14: warning: trailing semicolon in macro used in expression context
+ 9354 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9439:14: warning: trailing semicolon in macro used in expression context
+ 9439 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9504:66: warning: trailing semicolon in macro used in expression context
+ 9504 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9572:66: warning: trailing semicolon in macro used in expression context
+ 9572 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9641:66: warning: trailing semicolon in macro used in expression context
+ 9641 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9720:14: warning: trailing semicolon in macro used in expression context
+ 9720 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9802:14: warning: trailing semicolon in macro used in expression context
+ 9802 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9880:14: warning: trailing semicolon in macro used in expression context
+ 9880 |             );
+      |              ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9945:66: warning: trailing semicolon in macro used in expression context
+ 9945 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:10013:66: warning: trailing semicolon in macro used in expression context
+10013 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:10082:66: warning: trailing semicolon in macro used in expression context
+10082 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9001:66: warning: trailing semicolon in macro used in expression context
+ 9001 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9084:66: warning: trailing semicolon in macro used in expression context
+ 9084 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/../../stdarch/crates/core_arch/src/x86/avx512f.rs:9163:66: warning: trailing semicolon in macro used in expression context
+ 9163 |             simd_shuffle8(a, b, [$a, $b, $c, $d, $e, $f, $g, $h]);
+      |                                                                  ^
+./gccrs-src/libgrust/rustc-lib/core/src/num/flt2dec/strategy/grisu.rs:636:5: warning: unreachable statement
+  636 |     unsafe fn possibly_round(
+      |     ^~~~~~
+./gccrs-src/libgrust/rustc-lib/core/src/mem/maybe_uninit.rs:218:3: warning: ‘#[lang = "maybe_uninit"]’ is not implemented and has no effect
+  218 | #[lang = "maybe_uninit"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ptr/mod.rs:173:3: warning: ‘#[lang = "drop_in_place"]’ is not implemented and has no effect
+  173 | #[lang = "drop_in_place"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ptr/mod.rs:1142:3: error: unknown lang item
+ 1142 | #[lang = "align_offset"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/marker.rs:124:3: error: unknown lang item
+  124 | #[lang = "unsize"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ops/generator.rs:10:3: warning: ‘#[lang = "generator_state"]’ is not implemented and has no effect
+   10 | #[lang = "generator_state"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ops/generator.rs:67:3: warning: ‘#[lang = "generator"]’ is not implemented and has no effect
+   67 | #[lang = "generator"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ops/unsize.rs:35:3: error: unknown lang item
+   35 | #[lang = "coerce_unsized"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ops/unsize.rs:85:3: error: unknown lang item
+   85 | #[lang = "dispatch_from_dyn"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/ascii.rs:105:5: warning: unreachable statement
+  105 |     fn hexify(b: u8) -> u8 {
+      |     ^~
+./gccrs-src/libgrust/rustc-lib/core/src/panic.rs:30:3: error: unknown lang item
+   30 | #[lang = "panic_info"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/panic.rs:175:3: error: unknown lang item
+  175 | #[lang = "panic_location"]
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/panicking.rs:38:3: error: unknown lang item
+   38 | #[lang = "panic"] // needed by codegen for panic on overflow and other `Assert` MIR terminators
+      |   ^~~~
+crab1: error: unknown lang item
+./gccrs-src/libgrust/rustc-lib/core/src/panicking.rs:63:3: error: unknown lang item
+   63 | #[lang = "panic_bounds_check"] // needed by codegen for panic on OOB array/slice access
+      |   ^~~~
+./gccrs-src/libgrust/rustc-lib/core/src/pin.rs:560:7: error: unknown lang item
+  560 |     #[lang = "new_unchecked"]
+      |       ^~~~
+crab1: internal compiler error: in translate, at rust/hir/rust-ast-lower-pattern.cc:37
+0x2c222eb internal_error(char const*, ...)
+	./gccrs-src/gcc/diagnostic-global-context.cc:787
+0xb7dc2f fancy_abort(char const*, int, char const*)
+	./gccrs-src/gcc/diagnostics/context.cc:1813
+0x934b73 Rust::HIR::ASTLoweringPattern::translate(Rust::AST::Pattern&, bool)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-pattern.cc:37
+0xe19aac Rust::HIR::ASTLoweringPattern::visit(Rust::AST::IdentifierPattern&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-pattern.cc:57
+0xe199cc Rust::HIR::ASTLoweringPattern::translate(Rust::AST::Pattern&, bool)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-pattern.cc:35
+0xe19e6e lower_pattern_seq<__gnu_cxx::__normal_iterator<std::unique_ptr<Rust::AST::Pattern>*, std::vector<std::unique_ptr<Rust::AST::Pattern> > > >
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-pattern.cc:348
+0xe1a05c Rust::HIR::ASTLoweringPattern::visit(Rust::AST::SlicePattern&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-pattern.cc:383
+0xe199cc Rust::HIR::ASTLoweringPattern::translate(Rust::AST::Pattern&, bool)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-pattern.cc:35
+0xe0f370 Rust::HIR::ASTLoweringIfLetBlock::desugar_iflet(Rust::AST::IfLetExpr&, Rust::HIR::Expr**, Rust::HIR::Expr*, std::vector<Rust::HIR::MatchCase, std::allocator<Rust::HIR::MatchCase> >&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower.cc:242
+0xe0ff49 Rust::HIR::ASTLoweringIfLetBlock::visit(Rust::AST::IfLetExprConseqElse&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower.cc:327
+0xe2bf68 Rust::HIR::ASTLoweringIfLetBlock::translate(Rust::AST::IfLetExpr&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-block.h:121
+0xe2bf68 Rust::HIR::ASTLoweringExpr::visit(Rust::AST::IfLetExprConseqElse&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-expr.cc:121
+0xe2df28 Rust::HIR::ASTLoweringExpr::translate(Rust::AST::Expr&, bool*)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-expr.cc:45
+0xe0ddf3 Rust::HIR::ASTLoweringBlock::visit(Rust::AST::BlockExpr&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower.cc:143
+0xe2a572 Rust::HIR::ASTLoweringBlock::translate(Rust::AST::BlockExpr&, bool*)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-block.h:37
+0xe2a572 Rust::HIR::ASTLowerImplItem::visit(Rust::AST::Function&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-implitem.cc:174
+0xe28cca Rust::HIR::ASTLowerImplItem::translate(Rust::AST::AssociatedItem&, unsigned int)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-implitem.cc:35
+0xe21b8c Rust::HIR::ASTLoweringItem::visit(Rust::AST::InherentImpl&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-item.cc:581
+0xe1c88f Rust::HIR::ASTLoweringItem::translate(Rust::AST::Item&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-item.cc:38
+0xe1d0cf Rust::HIR::ASTLoweringItem::visit(Rust::AST::Module&)
+	./gccrs-src/gcc/rust/hir/rust-ast-lower-item.cc:71
+./gccrs-build/gcc/crab1 ./gccrs-src/libgrust/rustc-lib/core/src/lib.rs -quiet -dumpbase lib.rs -dumpbase-ext .rs -mtune=generic -march=x86-64 -frust-c-style-string-literals -frust-edition=2018 -L./gccrs-build/gcc -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -o /tmp/ccADHGRT.s
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+Please include the complete backtrace with any bug report.
+See <https://gcc.gnu.org/bugs/> for instructions.
+
+=== Summary ===
+File: gccrs-src/libgrust/rustc-lib/core/src/lib.rs
+Errors: 11
+Warnings: 211
+gccrs binary: gccrs-build/gcc/gccrs
