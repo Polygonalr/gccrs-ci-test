@@ -1,0 +1,8 @@
+gccrs: error: unrecognized command-line option ‘-frust-c-style-string-literals’
+
+=== Summary ===
+File: gccrs-src/libgrust/rustc-lib/core/src/lib.rs
+Errors: 1
+Warnings: 0
+0
+gccrs binary: gccrs-build/gcc/gccrs
